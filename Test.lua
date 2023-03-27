@@ -1,5 +1,14 @@
-local commands = {}
-local prefix = _G.Settings.Prefix
+repeat
+    task.wait()
+until game:IsLoaded()
+
+_G.Settings = {
+    Main = tostring(""), -- Main Name
+    Prefix = tostring("!"), -- Prefix Goes Here
+}
+
+
+local commands , prefix = {} , _G.Settings.Prefix
 
 local function AddCommand(name, cmd)
    cmd = cmd or function () end
@@ -19,4 +28,9 @@ end)
 
 AddCommand("print", function(...)
     print(...)
+ end)
+
+
+ AddCommand("Chat" , function(...)
+    game:GetService("Players"):Chat(...)
  end)
