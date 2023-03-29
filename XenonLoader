@@ -1,0 +1,6 @@
+getgenv().Settings = {
+    Main = "Hold",
+    Prefix = "!",
+}
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HoldingRecord/Xenon/main/Xenon", true))()
